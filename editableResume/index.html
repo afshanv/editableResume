@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editable Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- container -->
+    <div class="container">
+        <!-- left sec -->
+        <aside id="left-sec">
+            <div class="profile-pic">
+                <img id="profile-pic" src="profile.png" alt="Profile Pic">
+                <input type="file" id="profileInput" accept="image/*">
+            </div>
+            
+            <h1 id="displayName" contenteditable="true"><input type="text" id="name" required placeholder="Enter your name"></h1>
+            <p  id="displayField" contenteditable="true"><input type="text" id="field" required placeholder="Enter your field"></p>
+
+            <div class="contact-info">
+                <h2>Details</h2>
+                <p id="displayAddress" contenteditable="true"><input type="text" id="address" required placeholder="Enter your address"></p>
+                <p id="displayPhone" contenteditable="true"><input type="tel" id="phone" required placeholder="Enter your phone number"></p>
+                <p id="displayEmail" contenteditable="true"><input type="email" id="email" required placeholder="Enter your email"></p> 
+            </div>
+
+            <section id="skills">
+                <h2>Skills</h2>
+                <div id="skills-inputs" >
+                    <ul id="displaySkills" contenteditable="true">
+                    <input type="text" class="skills" required placeholder="Skill 1"><br>
+                    <input type="text" class="skills" required placeholder="Skill 2"><br>
+                    <input type="text" class="skills" required placeholder="Skill 3"><br>
+                    <input type="text" class="skills" required placeholder="Skill 4"><br>
+                    <input type="text" class="skills" required placeholder="Skill 5"><br>
+                    </ul>
+                </div>
+
+                <button id="show">Show Skills</button>
+                <button id="hide">Hide Skills</button>
+
+            </section>
+        </aside>
+
+        <!-- right sec -->
+        <main id="right-sec">
+            <section class="profile">
+                <h2>Profile</h2>
+                <p id="displayProfile" contenteditable="true">
+                <textarea id="profile" rows="4" required placeholder="Write your profile summary here..." ></textarea>
+                </p>
+            </section>
+        
+            <section id="education-section">
+                <h2>Education</h2>
+                <p id="displayEducation" contenteditable="true">
+                <textarea id="education" rows="4" required placeholder="Enter your education details..." ></textarea>
+                </p>
+            </section>
+            
+            <section id="experience-section">
+                <h2>Work Experience</h2>
+                <p id="displayExperience" contenteditable="true">
+                <textarea id="experience" rows="4" required placeholder="Enter your work experience..." ></textarea>
+                </p>   
+            </section>
+
+            <button id="generate">Generate Resume</button>
+
+        </main>
+    </div>
+
+    <script src="main.js" type="module"></script>
+</body>
+</html>
+
+</body>
+</html>
